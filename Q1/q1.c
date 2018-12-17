@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
 	pi=((double)count/(double)trials)*4.0;
 	printf("Estimated value = %0.4f\n",pi);
-	deviation=(22.0/7.0)-pi;
+	deviation=pi-(22.0/7.0);
 	printf("Deviation = %0.4f\n",deviation);
 	error=(deviation * 7.0 * 100.0)/22.0;
 	printf("Error = %0.4f%%\n",fabs(error));

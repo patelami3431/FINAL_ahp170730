@@ -8,6 +8,7 @@
 #include<string.h>
 
 struct data{
+	int per;
 	int num_of_trials;;
 	float success;
 	float failure;
@@ -96,6 +97,7 @@ int main(int argc, char *argv[])
 				}
 				srate = ((float)scount/trials)*100.0;
 				results.num_of_trials=trials;
+				results.per=p;
 				results.success=srate;
 				frate= 100.0 -  srate;
 				results.failure=frate;

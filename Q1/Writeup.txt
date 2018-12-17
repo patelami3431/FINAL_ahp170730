@@ -1,0 +1,22 @@
+For bash script:
+
+#points		Time(s)		Estimated Value		Deviation		%error
+10               0.14s      	     3.20000		0.571429		 1.81818%
+100		 1.253s		     3.08000		-0.062857		 1.99999%
+1000		 12.839s	     3.17200		0.029143		 0.92727%
+10000		 127.481s	     3.13680		-0.0060571		 0.19273%
+
+For C script:
+
+#points         Time(s)         Estimated Value         Deviation               %error
+10		 0.006s		     2.8000		-0.3429			 10.9091%
+100		 0.004s		     3.5600		0.4171			 13.2727%
+1000		 0.008s		     2.7600		-0.3829			 12.1818%
+10000		 0.054s		     3.5344		0.3915			 12.4582%
+
+Questions:
+1.1 The number of points the bash script was able to compute in 100 seconds was 35508 points. While the same for C script was 19671260 points. (The scripts are available as timepoints.sh and timepoints.c in the current folder)
+
+1.2 Code in C language was faster becasue of the the better quality of RNG than the one used in bash script. The order of convergence is better for RNG, thus giving more uniform points.
+
+1.3 Yes, more accurate results were found after executing the bash script. The accuracy was better for the bash script results than the results from C program. This could be attributed to the accuracy of 'bc' calculator, which helps prevent the loss of information while performing the calculations.
